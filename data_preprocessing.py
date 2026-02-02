@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 import cv2
 
 def process_image(img):
-    #img = cv2.imread('Camera_for_preprocessing.jpg')
-    #image_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    # If PyTorch CHW → HWC
+    if img.ndim == 3 and img.shape[0] in [1, 3]:
+        img = img.transpose(1, 2, 0)
+
+    img = img.astype(np.uint8)
+
     resized_img = cv2.resize(img, (256,256), interpolation=cv2.INTER_AREA)
     imggray = cv2.cvtColor(resized_img, cv2.COLOR_RGB2GRAY)
     eq_img = cv2.equalizeHist(imggray)
