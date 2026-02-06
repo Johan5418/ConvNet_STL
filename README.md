@@ -1,6 +1,6 @@
-## ConvNet_STL
+# ConvNet_STL
 
-# Overview
+## Overview
 
 This project aims to investigate the suitability of Convolutional Neural Networks (CNNs) on the STL-10 image dataset.
 We examine its mechanisms and performance using the TensorFlow and Pytorch backends, and explore various methods
@@ -8,7 +8,7 @@ to improve final classification accuracy, with further discussion into the use o
 feasibility for this scenario.
 
 
-# Tasks Allocations:
+## Tasks Allocations:
 
     - Donald: Adapt Tensorflow and Pytorch model, fine-tune CNN architecture for optimal performance. 
 
